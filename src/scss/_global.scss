@@ -1,0 +1,105 @@
+@import "mixins";
+// .icon-check{
+//   @extend %icon-empty;
+// }
+
+*, :after, :before {
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+}
+
+html {
+  overflow: visible;
+}
+
+.wrapper, body.noscroll {
+  overflow: hidden;
+}
+
+body {
+  background: $white;
+  min-width: 320px;
+  color: $primary-text;
+  margin: 0;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: .03em;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.heading-h1, .heading-h2, .heading-h3, .heading-h4, b, h1, h2, h3, h4, strong {
+  font-weight: 700;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px
+}
+
+.flex-wrap {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+fieldset,iframe,img {
+  border: 0
+}
+
+fieldset,form,img {
+  border-style: none
+}
+
+nav,ul {
+  list-style: none
+}
+
+a:focus,button:focus,input:focus,select:focus,textarea:focus {
+  outline: 0!important
+}
+
+textarea {
+  resize: none
+}
+
+a {
+  color: $primary-text;
+  text-decoration: none;
+  transition: all .3s ease;
+  display: inline-block;
+}
+
+a:active, a:focus, a:hover {
+  text-decoration: none;
+  color: $blue;
+  outline: 0;
+  border-color: transparent;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
