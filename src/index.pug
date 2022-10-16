@@ -1,28 +1,18 @@
-//- html
-//-     head
-//-         link(href='css/style.min.css')
-//-     body
-//-         include html/header
-//-         main.page
-//-             h1 Привет!
-//-             span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ab similique provident error veniam facilis quidem sed quae. Provident ullam itaque recusandae neque, vitae saepe libero praesentium magni quisquam eum!
-//-             img(src="@img/arenda_avto_v_reykyavike.jpeg")
-//-         include html/footer
-//-         script(src="js/app.min.js")
-
+include html/_global_mixins
 doctype html
-html(lang="en")
+html
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title @@title
-        link(rel="stylesheet" type="text/css" href='css/main.min.css')
-    body
-        include html/header
-        main.page
-            h1 Hello!
-            span Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ab similique provident error veniam facilis quidem sed quae. Provident ullam itaque recusandae neque, vitae saepe libero praesentium magni quisquam eum!
-            img(src="@img/arenda_avto_v_reykyavike.jpeg")
-        include html/footer
-        script(type="text/javascript" src="js/main.min.js")
+        include html/_head
+    body.main-page
+        //- wrapper start
+        .wrapper
+            //- header SECTION
+            include html/_header
+            //- header SECTION
+            main.main
+               | lets start
+            i.icon.icon-check
+
+            //- footer
+            include html/_footer
+        include html/_footer-include

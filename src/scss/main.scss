@@ -1,35 +1,11 @@
-// gulp-webp-css (не работает на яблочных устройствах в сафари)
-
-// @supports (-webkit-appearance: none) {
-//     body {
-//         background: url(../img/icons/arenda_avto_v_reykyavike.svg) 0 0 no-repeat;
-//     }
-//     .block {
-//         background: url(../img/arenda_avto_v_reykyavike.webp) 0 0 no-repeat;
-//     }
-// }
-
+@charset "UTF-8";
+@import "variables";
 @import "fonts";
+@import "reset";
+@import "global";
+@import "mixins";
 
-body {
-    font-family: CormorantUpright;
-    font-size: 50px;
-    background-color: aqua;
-    span {
-        color: rgb(27, 83, 39);
-    }
-    background: url("@img/arenda_avto_v_reykyavike.jpeg") 0 0 no-repeat;
-}
+// components
+@import "components/header";
 
-@media (max-width: 768px) {
-    span {
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    body {
-        background-color: green;
-    }
-}
+// templates
