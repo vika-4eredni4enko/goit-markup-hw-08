@@ -1,6 +1,45 @@
 .header {
+    padding: 25px 0;
+    &__nav-item {
+        position: relative;
+        margin-right: 50px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &::after {
+            background: $blue;
+            position: absolute;
+            bottom: -22px;
+            height: 4px;
+            width: 100%;
+            content: "";
+            left: 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+    }
     &__nav-link {
         font-weight: 500;
         color: $primary-text;
+    }
+    &__wrap {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 145px;
+    }
+    &__right {
+        align-items: center;
+        width: calc(100% - 145px);
+        padding-left: 93px;
+        justify-content: space-between;
+    }
+    &__contacts {
+        color: $grey;
+        font-weight: 500;
+    }
+    &__contacts-email {
+        
     }
 }

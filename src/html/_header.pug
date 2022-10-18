@@ -2,7 +2,7 @@ header.header
     .container
         .header__wrap.flex-wrap
             a.header__logo(href="#")
-                img(src="@img/WebStudio.svg", alt="Logo")
+                img(src="@img/logo.svg", alt="Logo")
             .header__right.flex-wrap
                 .header__nav-wrap.flex-wrap
                     nav.header__nav
@@ -13,11 +13,19 @@ header.header
                                 a.header__nav-link(href="#") Портфоліо
                             li.header__nav-item
                                 a.header__nav-link(href="#") Контакти
-                .header__contacts
+                .header__contacts.flex-wrap
                     .header__contacts-email
-                        a.header__contacts-email-link(href="mailto:info@devstudio.com") info@devstudio.com
+                        a.header__contacts-email-link(href="mailto:info@devstudio.com") 
+                            //- img.svg-email-dims(src="@img/icons/icons.svg#email", alt="email")
+                            svg.icon.icon-email
+                                use(xlink:href='@img/icons/icons.svg#email')
+                            span info@devstudio.com
                     .header__contacts-phone
-                        a(href="tel:+38 096 111 11 11") +38 096 111 11 11
+                        a(href="tel:+38 096 111 11 11") 
+                            //- img.svg-phone-dims(src="@img/icons/icons.svg#phone", alt="phone")
+                            svg.icon.icon-phone
+                                use(xlink:href='@img/icons/icons.svg#phone')
+                            span +38 096 111 11 11
 
 
 

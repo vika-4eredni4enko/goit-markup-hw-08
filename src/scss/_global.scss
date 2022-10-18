@@ -82,7 +82,7 @@ textarea {
 }
 
 a {
-  color: $primary-text;
+  color: $grey;
   text-decoration: none;
   transition: all .3s ease;
   display: inline-block;
@@ -102,4 +102,11 @@ a img {
 img {
   display: block;
   height: auto;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }

@@ -8,6 +8,7 @@ export const svgSprive = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
+        
         .pipe(svgSprite({
             mode: {
                 stack: {
