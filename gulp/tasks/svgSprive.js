@@ -1,4 +1,6 @@
 import svgSprite from "gulp-svg-sprite";
+import cheerio from "gulp-cheerio";
+import replace from "gulp-replace";
 
 export const svgSprive = () => {
     return app.gulp.src(`${app.path.src.svgicons}`, {})
@@ -8,7 +10,16 @@ export const svgSprive = () => {
                 message: "Error: <%= error.message %>"
             })
         ))
-        
+        // Удалить атрибуты в svg
+        .pipe(cheerio ({
+            run: function($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(replace('&gt;', '>'))
         .pipe(svgSprite({
             mode: {
                 stack: {
