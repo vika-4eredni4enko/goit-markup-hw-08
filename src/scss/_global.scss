@@ -40,12 +40,12 @@ body {
   width: 1200px;
   padding: 0 15px;
   margin-right: auto;
-  margin-left: auto
+  margin-left: auto;
 }
 
 .row {
   margin-right: -15px;
-  margin-left: -15px
+  margin-left: -15px;
 }
 
 .flex-wrap {
@@ -53,32 +53,95 @@ body {
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0
+  border-spacing: 0;
 }
 
 fieldset,iframe,img {
-  border: 0
+  border: 0;
 }
 
 fieldset,form,img {
-  border-style: none
+  border-style: none;
 }
 
 nav,ul {
-  list-style: none
+  list-style: none;
 }
 
 a:focus,button:focus,input:focus,select:focus,textarea:focus {
-  outline: 0!important
+  outline: 0!important;
 }
 
 textarea {
-  resize: none
+  resize: none;
+  padding: 15px;
+  height: 140px;
+}
+
+input, select, textarea {
+  margin: 0;
+  padding: 0 16px;
+  box-shadow: none;
+  width: 100%;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 1px solid $blue;
+  box-shadow: none;
+}
+
+input.readonly:focus, select.readonly:focus, textarea.readonly:focus {
+  border: 1px solid #d3e4f2;
+  box-shadow: none;
+}
+
+input[type=text],input[type=file],input[type=password],input[type=submit],input[type=email],input[type=tel],select,textarea {
+  appearance: none;
+}
+
+input[type=email] {
+  box-shadow: none;
+}
+
+input[type=image] {
+  padding: 0;
+  border: none;
+}
+
+button::-moz-focus-inner,input[type=submit]::-moz-focus-inner,input[type=button]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button,input[type=submit],input[type=button] {
+  cursor: pointer;
+}
+
+button:focus,input[type=submit]:focus,input[type=button]:focus {
+  outline: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
 }
 
 a {
@@ -109,4 +172,46 @@ img {
   width: 1em;
   height: 1em;
   fill: currentColor;
+}
+
+.heading-h2 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.icon-instagram, .icon-tw, .icon-fb, .icon-linkedin {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+b,em,h1,h2,h3,h4,h5,h6,i,label,p,span,strong {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+div {
+  word-wrap: break-word;
+}
+
+.btn {
+  background: $blue;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: .06em;
+  padding: 10px 15px;
+  transition: all .3s ease;
+  white-space: nowrap;
+  &:hover {
+      background: $medium-blue;
+      color: $white;
+  }
 }

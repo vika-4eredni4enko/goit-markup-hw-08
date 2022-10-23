@@ -1,0 +1,56 @@
+.clients {
+    margin: 94px 0;
+    .heading-h2 {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-column-gap: 30px;
+    }
+    &__item {
+        width: 170px;
+        height: 92px;
+        line-height: 92px;
+        border: 1px solid $medium-gray;
+        border-radius: 4px;
+        transition: all .3s ease;
+        text-align: center;
+        &:hover {
+            border: 1px solid $blue;
+            .icon {
+                color: $blue;
+            }
+        }
+    }
+    .icon {
+        vertical-align: middle;
+        color: $medium-gray;
+        transition: all .3s ease;
+    }
+    .icon-client1 {
+        width: 41px;
+        height: 47px;
+    }
+    .icon-client2 {
+        width: 40px;
+        height: 52px;
+    }
+    .icon-client3 {
+        width: 44px;
+        height: 42px;
+    }
+    .icon-client4 {
+        width: 85px;
+        height: 41px;
+    }
+    .icon-client5 {
+        width: 63px;
+        height: 46px;
+    }
+    .icon-client6 {
+        width: 94px;
+        height: 44px;
+    }
+}

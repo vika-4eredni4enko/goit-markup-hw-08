@@ -1,0 +1,71 @@
+.footer {
+    padding: 60px 0;
+    background: $dark-grey;
+    &__logo {
+        margin-bottom: 20px;
+    }
+    &__address {
+        line-height: 24px;
+        color: $white;
+        margin-bottom: 9px;
+        display: block;
+    }
+    &__email, &__phone {
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+    }
+    &__email {
+        margin-bottom: 9px;
+    }
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 20px;
+        display: block;
+    }
+    &__soc-list {
+        justify-content: center;
+    }
+    
+    &__soc-link {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        margin-right: 10px;
+        display: block;
+        transition: all .3s ease;
+        color: $white;
+        &:hover {
+            color: $white;
+            background-color: $blue;
+        }
+    }
+    &__soc-item:last-of-type {
+        .team__soc-link {
+            margin-right: 0;
+        }
+    }
+    &__subscribe-form .input-field {
+        max-width: 358px;
+        width: 100%;
+        margin-right: 12px;
+    }
+    &__subscribe-btn {
+        min-width: 200px;
+    }
+    &__subscribe-btn-title {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .icon-send {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+}

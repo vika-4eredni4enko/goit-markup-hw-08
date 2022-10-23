@@ -1,11 +1,40 @@
-footer.footer footer
-
-
-
-                  
-
-                                           
-
-
-                                 
-                                              
+footer.footer
+    .footer__wrap.flex-wrap
+        .container
+            .footer__left
+                .footer__col
+                    .footer__logo 
+                        img(src="@img/logo-footer.svg", alt="Logo-footer")
+                    .footer__info
+                        span.footer__address м. Київ, пр-т Лесі Українки, 26
+                        span.footer__email info@devstudio.com
+                        span.footer__phone +38 096 111 11 11
+                .footer__col
+                    span.footer__title Приєднуйтесь
+                    ul.footer__soc-list.flex-wrap
+                        li.footer__soc-item
+                            a.footer__soc-link(href="#" target="_blank" rel="nofollow")
+                                svg.icon.icon-instagram
+                                    use(xlink:href="@img/icons/icons.svg#instagram")
+                        li.footer__soc-item
+                            a.footer__soc-link(href="#" target="_blank" rel="nofollow")
+                                svg.icon.icon-tw
+                                    use(xlink:href="@img/icons/icons.svg#tw")
+                        li.footer__soc-item
+                            a.footer__soc-link(href="#" target="_blank" rel="nofollow")
+                                svg.icon.icon-fb
+                                    use(xlink:href="@img/icons/icons.svg#fb")
+                        li.footer__soc-item
+                            a.footer__soc-link(href="#" target="_blank" rel="nofollow")
+                                svg.icon.icon-linkedin
+                                    use(xlink:href="@img/icons/icons.svg#linkedin")
+            .footer__right
+                .footer__subscribe-info
+                    span.footer__title Підпишіться на розсилку
+                    form.footer__subscribe-form.flex-wrap(role="form" method="post")
+                        .form-field.input-field
+                            input.validate(type="email" required="" name="subscribe[email]" placeholder="E-mail" data-validate="email")
+                        button.footer__subscribe-btn.button-reset.btn(type="submit")
+                            span.footer__subscribe-btn-title Підписатися
+                            svg.icon.icon-send
+                                use(xlink:href="@img/icons/icons.svg#send")
