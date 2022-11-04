@@ -7,6 +7,8 @@ import webpcss from 'gulp-webpcss'; // Вывод WEBP изображений
 import autoprefixer from 'gulp-autoprefixer'; // Добавление вендорных префиксов
 import groupCssMediaQueries from 'gulp-group-css-media-queries'; // Групировка медиа запросов
 
+import concatCss from 'gulp-concat-css';
+
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
@@ -40,6 +42,23 @@ export const scss = () => {
         .pipe(rename({
             extname: ".min.css"
         }))
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.plugins.browsersync.stream());
+}
+
+// собираем библиотеки css(желательно min sass)
+export const libsCss = () => {
+    return app.gulp.src([
+        'node_modules/magnific-popup/dist/magnific-popup.css'
+      ])
+        .pipe(app.plugins.plumber(
+            app.plugins.notify.onError({
+                title: "CSS",
+                message: "Error: <%= error.message %>"
+            })
+        ))
+        .pipe(concatCss("libs.min.css"))
+        .pipe(cleanCss())
         .pipe(app.gulp.dest(app.path.build.css))
         .pipe(app.plugins.browsersync.stream());
 }

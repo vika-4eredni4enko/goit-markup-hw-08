@@ -1,0 +1,22 @@
+#test-form.mfp-hide.contacts-form
+  .contacts-form__title Залиште свої дані, ми вам передзвонимо
+  form
+    .input-container
+      label(for='name') Ім'я
+      input.form-control(type='text' name='contacts[user_name]' required='required')
+    .input-container
+      label(for='phone') Телефон
+      input#phone-modal.validate.form-control(type='text' name='contacts[user_phone]' required='required')
+    .input-container
+      label(for='email') Пошта
+      input.form-control(type='email' name='contacts[user_email]' required='required')
+    .input-container
+      label(for='textarea') Коментар
+      textarea(placeholder='Введіть текст')
+    .checkbox
+      label.checkbox__label
+        input(type='checkbox' name='name-1')
+        span.label-text
+          | Погоджуюся з розсилкою та приймаю 
+          a.contract-terms(href='#test-form') Умови договору
+    button.btn.btn-red(type='submit') Відправити

@@ -1,13 +1,13 @@
 .footer {
-    padding: 60px 0;
+    padding: 67px 0;
     background: $dark-grey;
     &__logo {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
     &__address {
         line-height: 24px;
         color: $white;
-        margin-bottom: 9px;
+        margin-bottom: 6px;
         display: block;
     }
     &__email, &__phone {
@@ -16,19 +16,15 @@
         display: block;
     }
     &__email {
-        margin-bottom: 9px;
+        margin-bottom: 6px;
     }
     &__title {
         font-weight: 700;
         text-transform: uppercase;
         color: $white;
-        margin-bottom: 20px;
+        margin: 5px 0 20px;
         display: block;
     }
-    &__soc-list {
-        justify-content: center;
-    }
-    
     &__soc-link {
         width: 44px;
         height: 44px;
@@ -59,13 +55,21 @@
     &__subscribe-btn {
         min-width: 200px;
     }
-    &__subscribe-btn-title {
-        display: inline-block;
-        margin-right: 10px;
-    }
     .icon-send {
         width: 24px;
         height: 24px;
         vertical-align: middle;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 30px;
+    }
+    &__col-1 {
+        width: 53%;
+        padding-right: 15px;
+    }
+    &__col-2 {
+        width: 47%;
     }
 }

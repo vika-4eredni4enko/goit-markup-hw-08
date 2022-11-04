@@ -1,7 +1,4 @@
 @import "mixins";
-// .icon-check{
-//   @extend %icon-empty;
-// }
 
 *, :after, :before {
   -webkit-box-sizing: border-box!important;
@@ -28,6 +25,25 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+	flex: 0 0 auto;
 }
 
 .heading-h1, .heading-h2, .heading-h3, .heading-h4, b, h1, h2, h3, h4, strong {
@@ -153,7 +169,6 @@ a {
 
 a:active, a:focus, a:hover {
   text-decoration: none;
-  color: $blue;
   outline: 0;
   border-color: transparent;
 }
