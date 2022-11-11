@@ -171,6 +171,7 @@ a:active, a:focus, a:hover {
   text-decoration: none;
   outline: 0;
   border-color: transparent;
+  color: $blue;
 }
 
 a img {
@@ -225,7 +226,7 @@ div {
   padding: 10px 15px;
   transition: all .3s ease;
   white-space: nowrap;
-  &:hover {
+  &:hover, &:focus, &:active {
       background: $medium-blue;
       color: $white;
   }

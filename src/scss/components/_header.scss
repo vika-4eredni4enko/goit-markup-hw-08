@@ -71,4 +71,33 @@
         height: 16px;
         vertical-align: middle;
     }
+    .btn-menu {
+        cursor: pointer;
+        height: 16px;
+        display: inline-flex;
+        align-items: center;
+        // display: none;
+        .line {
+            width: 24px;
+            height: 2.67px;
+            background: $primary-text;
+            display: inline-block;
+            position: relative;
+            &:after, &:before {
+                width: 24px;
+                height: 2.67px;
+                background: $primary-text;
+                display: inline-block;
+                position: absolute;
+                content: "";
+                transition: all .3s ease;
+            }
+            &:before {
+                top: 7px;
+            }
+            &:after {
+                bottom: 7px;
+            }
+        }
+    }
 }
