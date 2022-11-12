@@ -71,33 +71,161 @@
         height: 16px;
         vertical-align: middle;
     }
-    .btn-menu {
-        cursor: pointer;
-        height: 16px;
-        display: inline-flex;
-        align-items: center;
-        // display: none;
-        .line {
-            width: 24px;
-            height: 2.67px;
-            background: $primary-text;
-            display: inline-block;
+}
+
+@include rmin(320) {
+    .header {
+        padding: 16px 0;
+        &__nav-item {
+            width: 100%;
+        }
+        &__wrap {
             position: relative;
-            &:after, &:before {
+        }
+        &__logo {
+            width: 134px;
+        }
+        &__right {
+            position: fixed;
+            background-color: $white;
+            z-index: 9999;
+            height: 100%;
+            transform: translateX(-100%);
+            width: 100%;
+            transition: all .3s ease;
+            top: 0;
+            left: 0;
+            padding: 48px 40px;
+            flex-direction: column;
+            align-items: flex-start;
+            &.open {
+                transform: translateX(0);
+            }
+        }
+        &__nav-link {
+            font-size: 40px;
+            line-height: 47px;
+            letter-spacing: 0.02em;
+            &:hover::after {
+                width: 0;
+            }
+        }
+        &__nav-item {
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+        &__nav-wrap {
+            width: 100%;
+        }
+        .btn-menu {
+            cursor: pointer;
+            // display: none;
+            display: inline-flex;
+            align-items: center;
+            height: 16px;
+            .line {
                 width: 24px;
-                height: 2.67px;
+                height: 3px;
                 background: $primary-text;
                 display: inline-block;
+                position: relative;
+                &:after, &:before {
+                    width: 24px;
+                    height: 3px;
+                    background: $primary-text;
+                    display: inline-block;
+                    position: absolute;
+                    content: "";
+                    transition: all .3s ease;
+                }
+                &:before {
+                    top: 7px;
+                }
+                &:after {
+                    bottom: 7px;
+                }
+            }
+            &.active {
+                z-index: 99999;
+                height: 19px;
+                .line {
+                    width: 19px;
+                    height: 0;
+                    &:after, &:before {
+                        top: -2px;
+                        left: -2px;
+                        height: 3px;
+                        width: 23px;
+                    }
+                    &:before {
+                        transform: rotate(45deg);
+                    }
+                    &:after {
+                        transform: rotate(-45deg);
+                    }
+                    &:hover {
+                        &:after, &:before {
+                            background: $blue;
+                        }
+                    }
+                }
+            }
+        }
+        &__contacts {
+            width: 100%;
+            padding-left: 0;
+            flex-direction: column-reverse;
+        }
+        &__contacts-email,
+        &__contacts-phone {
+            width: 100%;
+        }
+        &__contacts-phone {
+            justify-content: flex-start;
+        }
+        .icon-email, .icon-smartphone {
+            display: none;
+        }
+        &__contacts-phone {
+            margin-bottom: 32px;
+        }
+        &__contacts-email {
+            margin-bottom: 64px;
+        }
+        &__contacts-phone-link {
+            color: #2196F3;
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 0.02em;
+        }
+        &__contacts-email-link {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0.02em;
+        }
+        &__soc-item {
+            padding-right: 20px;
+            &:last-of-type {
+                padding-right: 0;
+            }
+        }
+        &__soc-link {
+            color: $blue;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            position: relative;
+            &::after {
+                content: '';
                 position: absolute;
-                content: "";
-                transition: all .3s ease;
-            }
-            &:before {
-                top: 7px;
-            }
-            &:after {
-                bottom: 7px;
+                width: 1px;
+                height: 22px;
+                top: 0;
+                bottom: 0;
+                color: rgba(33, 33, 33, 0.2);
+                left: 10px;
             }
         }
     }
-}
+    
+} 

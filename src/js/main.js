@@ -165,7 +165,7 @@ heightBlock();
 
 $(".js-open-menu").click(function () {
     $(this).toggleClass("active");
-    $(".mob-menu").toggleClass("open");
+    $(".js-mob-menu").toggleClass("open");
     $("body").toggleClass("noscroll");
     $("html").toggleClass("noscroll");
 });
