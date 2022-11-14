@@ -49,6 +49,10 @@
   @media only screen and (min-width: $width+ "px") {
     @content; } }
 
+@mixin rminmax($widthmin, $widthmax) {
+  @media only screen and (min-width: $widthmin+ "px") and (max-width: $widthmax+ "px") {
+    @content; } }
+
 /*=======================END-MEDIA=====================*/
 //placeholder
 @mixin placeholder {
