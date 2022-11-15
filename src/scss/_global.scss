@@ -192,8 +192,12 @@ img {
 }
 
 .heading-h2 {
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 33px;
+  @include rmin(768) {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .icon-instagram, .icon-tw, .icon-fb, .icon-linkedin {

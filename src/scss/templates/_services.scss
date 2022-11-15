@@ -1,56 +1,64 @@
-.services {
-    margin: 94px 0;
-    .heading-h2 {
-        text-align: center;
-        margin-bottom: 50px;
+@include rminmax(320, 1200) {
+    .services {
+        display: none;
     }
-    &__img {
-        position: relative;
-        overflow: hidden;
-        &:before {
-            position: absolute;
-            z-index: 1;
-            opacity: 0;
-            transition: all .2s ease;
-            background: linear-gradient(0deg,rgba(46,45,45,.3),rgba(46,45,45,.3));
-            display: block;
-            right: 0;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            content: "";
+}
+
+@include rmin(1201) {
+    .services {
+        margin: 94px 0;
+        .heading-h2 {
+            text-align: center;
+            margin-bottom: 50px;
         }
-    }
-    &__item {
-        position: relative;
-        img {
-            transition: all .5s ease;
+        &__img {
+            position: relative;
+            overflow: hidden;
+            &:before {
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+                transition: all .2s ease;
+                background: linear-gradient(0deg,rgba(46,45,45,.3),rgba(46,45,45,.3));
+                display: block;
+                right: 0;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                content: "";
+            }
         }
-        &:hover {
+        &__item {
+            position: relative;
             img {
                 transition: all .5s ease;
-                transform: scale(1.05);
             }
-            .services__img:before {
-                opacity: 1;
+            &:hover {
+                img {
+                    transition: all .5s ease;
+                    transform: scale(1.05);
+                }
+                .services__img:before {
+                    opacity: 1;
+                }
             }
         }
-    }
-    &__wrap {
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-column-gap: 30px;
-    }
-    &__title {
-        color: $white;
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 27px 15px;
-        background: rgba(47, 48, 58, 0.8);
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        text-align: center;
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 30px;
+        }
+        &__title {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 27px 15px;
+            background: rgba(47, 48, 58, 0.8);
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
     }
 }

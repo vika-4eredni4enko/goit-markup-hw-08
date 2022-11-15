@@ -1,8 +1,8 @@
 .footer {
-    padding: 67px 0;
+    padding: 60px 0;
     background: $dark-grey;
     &__logo {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
     &__address {
         line-height: 24px;
@@ -48,7 +48,7 @@
         }
     }
     &__subscribe-form .input-field {
-        max-width: 358px;
+        max-width: 100%;
         width: 100%;
         margin-right: 12px;
     }
@@ -62,14 +62,84 @@
     }
     &__wrap {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-column-gap: 30px;
+        grid-template-columns: repeat(1,1fr);
     }
-    &__col-1 {
-        width: 53%;
-        padding-right: 15px;
-    }
+    &__col-1, 
     &__col-2 {
-        width: 47%;
+        width: 100%;
+    }
+}
+
+@include rminmax(320, 1200) {
+    .footer {
+        &__info,
+        &__col-2 {
+            margin-bottom: 60px;
+        }
+        &__soc-list {
+            justify-content: center;
+        }
+        &__subscribe-form .input-field {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        &__subscribe-btn {
+            margin: 0 auto;
+        }
+        &__title {
+            margin-top: 0;
+        }
+        &__wrap {
+            text-align: center;
+        }
+        &__logo img {
+            margin: 0 auto;
+        }
+    }
+}
+
+@include rminmax(320, 599) {
+    .footer {
+        &__wrap {
+            justify-items: center;
+        }
+    }
+}
+
+@include rminmax(600, 1200) {
+    .footer {
+        &__col-1, 
+        &__col-2 {
+            width: 50%;
+        }
+        &__subscribe-form {
+            flex-direction: column;
+            align-items: center;
+            .input-field {
+                max-width: 450px;
+            }
+        }
+    }
+}
+@include rmin(1201) {
+    .footer {
+        padding: 67px 0;
+        &__wrap {
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 30px;
+        }
+        &__col-1 {
+            width: 53%;
+            padding-right: 15px;
+        }
+        &__col-2 {
+            width: 47%;
+        }
+        &__logo {
+            margin-bottom: 24px;
+        }
+        &__subscribe-form .input-field {
+            max-width: 358px;
+        }
     }
 }

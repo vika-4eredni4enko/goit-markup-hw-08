@@ -1,5 +1,5 @@
 .features {
-    margin: 60px 0;
+    margin: 60px 0 30px;
     &__img {
         background: $light-gray;
         padding: 25px 15px;
@@ -27,7 +27,7 @@
     }
 }
 
-@include rminmax(320, 1023) {
+@include rminmax(320, 1200) {
     .features {
         &__item {
             margin-bottom: 30px;
@@ -35,7 +35,7 @@
     }
 }
 
-@include rminmax(768, 1200) {
+@include rminmax(600, 1200) {
     .features {
         &__wrap {
             grid-template-columns: repeat(2,1fr);
@@ -48,8 +48,8 @@
     .features {
         margin: 94px 0;
         &__wrap {
-            display: grid;
             grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 30px;
         }
         &__img {
             max-width: 270px;

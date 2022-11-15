@@ -1,16 +1,15 @@
 .clients {
-    margin: 94px 0;
+    margin: 60px 0 30px;
     .heading-h2 {
         margin-bottom: 50px;
         text-align: center;
     }
     &__wrap {
         display: grid;
-        grid-template-columns: repeat(6,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-column-gap: 30px;
     }
     &__item {
-        width: 170px;
         height: 92px;
         line-height: 92px;
         border: 1px solid $medium-gray;
@@ -52,5 +51,32 @@
     .icon-client6 {
         width: 94px;
         height: 44px;
+    }
+}
+
+@include rminmax(320, 1200) {
+    .clients {
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@include rminmax(600, 1200) {
+    .clients {
+        &__wrap {
+            grid-template-columns: repeat(3,1fr);
+            grid-column-gap: 30px;
+        }
+    }
+}
+
+@include rmin(1201) {
+    .clients {
+        margin: 94px 0;
+        &__wrap {
+            grid-template-columns: repeat(6,1fr);
+            grid-column-gap: 30px;
+        }
     }
 }
