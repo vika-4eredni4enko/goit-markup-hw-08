@@ -2,22 +2,22 @@
   .contacts-form__title Залиште свої дані, ми вам передзвонимо
   form
     .input-container
-      label(for='name') Ім'я
+      label Ім'я
       input.form-control(type='text' name='contacts[user_name]' required='required')
       svg.icon.icon-person
         use(xlink:href="@img/icons/icons.svg#person")
     .input-container
-      label(for='phone') Телефон
+      label Телефон
       input#phone-modal.validate.form-control(type='text' name='contacts[user_phone]' required='required')
       svg.icon.icon-phone-black
         use(xlink:href="@img/icons/icons.svg#phone-black")
     .input-container
-      label(for='email') Пошта
+      label Пошта
       input.form-control(type='email' name='contacts[user_email]' required='required')
       svg.icon.icon-email-black
         use(xlink:href="@img/icons/icons.svg#email-black")
     .input-container
-      label(for='textarea') Коментар
+      label Коментар
       textarea(placeholder='Введіть текст')
     .checkbox
       label.checkbox__label
