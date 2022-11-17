@@ -1,220 +1,231 @@
 /* overlay at start */
 .mfp-fade.mfp-bg {
-    opacity: 0;
-  
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-  }
-  /* overlay animate in */
-  .mfp-fade.mfp-bg.mfp-ready {
-    opacity: 0.8;
-  }
-  /* overlay animate out */
-  .mfp-fade.mfp-bg.mfp-removing {
-    opacity: 0;
-  }
-  
-  /* content at start */
-  .mfp-fade.mfp-wrap .mfp-content {
-    opacity: 0;
-  
-    -webkit-transition: all 0.15s ease-out;
-    -moz-transition: all 0.15s ease-out;
-    transition: all 0.15s ease-out;
-  }
-  /* content animate it */
-  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-    opacity: 1;
-  }
-  /* content animate out */
-  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-    opacity: 0;
-  }
+  opacity: 0;
 
-  .mfp-bg {
-    background: rgba(0, 0, 0, 0.5);
-  }
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
 
-  .mfp-close-btn-in .mfp-close {
-    color: #000000;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    line-height: 30px;
-    transition: all .3s ease;
-    margin: 8px;
-    &:hover {
-      color: $blue;
-    }
-  }
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
 
-  .contacts-form {
-    width: 528px;
-    padding: 40px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+.mfp-bg {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  line-height: 30px;
+  transition: all .3s ease;
+  margin: 8px;
+  &:hover {
+    color: $blue;
+  }
+}
+
+@include r(900) {
+  .mfp-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.contacts-form {
+  width: 528px;
+  max-width: 100%;
+  padding: 40px;
+  background: $white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: 0 auto;
+  position: relative;
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  label {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $grey;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+  .form-control {
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin: 0 auto;
-    position: relative;
-    &__title {
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 23px;
-      text-align: center;
-      margin-bottom: 12px;
+    height: 40px;
+    margin-bottom: 10px;
+    color: $primary-text;
+    padding-left: 42px;
+    &:focus {
+      border-color: $blue;
+      cursor: pointer;
+      + .icon {
+        color: $blue;
+      }
     }
-    label {
+  }
+  textarea {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    min-height: 120px;
+    padding: 12px 16px;
+    color: $primary-text;
+    margin-bottom: 20px;
+    &[placeholder] {
       font-size: 12px;
       line-height: 14px;
       letter-spacing: 0.01em;
-      color: #757575;
-      margin-bottom: 4px;
-      display: inline-block;
     }
-    .form-control {
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: 4px;
-      height: 40px;
-      margin-bottom: 10px;
-      color: #212121;
-      padding-left: 42px;
-      &:focus {
-        border-color: $blue;
-        cursor: pointer;
-        + .icon {
-          color: $blue;
-        }
-      }
-    }
-    textarea {
-      border: 1px solid rgba(33, 33, 33, 0.2);
-      border-radius: 4px;
-      min-height: 120px;
-      padding: 12px 16px;
-      color: #212121;
-      margin-bottom: 20px;
-      &[placeholder] {
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.01em;
-      }
-      &:focus {
-        border-color: $blue;
-        cursor: pointer;
-      }
-    }
-    .btn {
-      margin: 0 auto;
-      display: block;
-    }
-    .input-container {
-      position: relative;
-    }
-    .icon {
-      position: absolute;
-      left: 16px;
-      top: 34px;
-    }
-    .icon-person {
-      width: 12px;
-      height: 12px;
-    }
-    .icon-phone-black {
-      width: 13px;
-      height: 13px;
-    }
-    .icon-email-black {
-      width: 15px;
-      height: 12px;
+    &:focus {
+      border-color: $blue;
+      cursor: pointer;
     }
   }
+  .btn {
+    margin: 0 auto;
+    display: block;
+    min-width: 200px;
+  }
+  .input-container {
+    position: relative;
+  }
+  .icon {
+    position: absolute;
+    left: 16px;
+    top: 34px;
+  }
+  .icon-person {
+    width: 12px;
+    height: 12px;
+  }
+  .icon-phone-black {
+    width: 13px;
+    height: 13px;
+  }
+  .icon-email-black {
+    width: 15px;
+    height: 12px;
+  }
+}
 
-  .checkbox {
-    text-align: center;
-    input[type=checkbox] {
+.checkbox {
+  text-align: center;
+  input[type=checkbox] {
+    width: 16px;
+    height: 15px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    visibility: visible;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .label-text {
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+    padding-left: 23px;
+    letter-spacing: 0;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    &:before {
+      position: absolute;
       width: 16px;
       height: 15px;
-      padding: 0;
+      left: 0;
+      cursor: pointer;
+      top: 0;
+      content: "";
+      display: block;
+      background: $white;
+      border: 2px solid $primary-text;
+      border-radius: 3px;
+    }
+    &:after {
+      content: "";
       position: absolute;
       left: 0;
-      top: 4px;
-      visibility: visible;
+      top: 0;
+      transition: all .3s ease;
+      top: 1px;
+      left: 5px;
+      width: 6px;
+      height: 11px;
+      transform: rotate(44deg);
+      border-bottom: 2px solid $white;
+      border-right: 2px solid $white;
       opacity: 0;
-      z-index: 2;
-      cursor: pointer;
-    }
-  
-    .label-text {
-      font-size: 14px;
-      line-height: 24px;
-      position: relative;
-      padding-left: 23px;
-      letter-spacing: 0;
-      cursor: pointer;
-      letter-spacing: 0.03em;
-  
-      &:after {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        left: 0;
-        cursor: pointer;
-        top: 0;
-      }
-  
-      &:before {
-        position: absolute;
-        width: 16px;
-        height: 15px;
-        left: 0;
-        cursor: pointer;
-        top: 0;
-        content: "";
-        display: block;
-        background: #fff;
-        border: 2px solid $primary-text;
-        border-radius: 3px;
-      }
-  
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        transition: all .3s ease;
-        top: 1px;
-        left: 5px;
-        width: 6px;
-        height: 11px;
-        transform: rotate(44deg);
-        border-bottom: 2px solid $white;
-        border-right: 2px solid $white;
-        opacity: 0;
-      }
-    }
-    .checkbox__label {
-      position: relative;
-      margin-bottom: 30px;
-      [type=checkbox]:checked + .label-text:after {
-        opacity: 1;
-      }
-  
-      [type=checkbox]:checked + .label-text:before {
-        background: $blue;
-        border: 2px solid $blue;
-      }
-    }
-    .contract-terms {
-      color: $blue;
-      border-bottom: 1px solid $blue;
-      line-height: 14px;
-      &:hover {
-        border-color: transparent;
-      }
     }
   }
+  .checkbox__label {
+    position: relative;
+    margin-bottom: 30px;
+    [type=checkbox]:checked + .label-text:after {
+      opacity: 1;
+    }
 
-  
+    [type=checkbox]:checked + .label-text:before {
+      background: $blue;
+      border: 2px solid $blue;
+    }
+  }
+  .contract-terms {
+    color: $blue;
+    border-bottom: 1px solid $blue;
+    line-height: 14px;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+@include rminmax(320, 768) {
+  .checkbox {
+    .label-text {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .contacts-form {
+    width: 450px;
+    &__title {
+      line-height: 30px;
+    }
+  }
+}

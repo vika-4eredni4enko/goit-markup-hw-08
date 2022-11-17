@@ -43,7 +43,7 @@
         }
     }
     &__soc-item:last-of-type {
-        .team__soc-link {
+        .footer__soc-link {
             margin-right: 0;
         }
     }
@@ -98,14 +98,6 @@
     }
 }
 
-@include rminmax(320, 599) {
-    .footer {
-        &__wrap {
-            justify-items: center;
-        }
-    }
-}
-
 @include rminmax(600, 1200) {
     .footer {
         &__col-1, 
@@ -121,6 +113,7 @@
         }
     }
 }
+
 @include rmin(1201) {
     .footer {
         padding: 67px 0;
